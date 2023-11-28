@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "N6NfARFRZBOpLoRHt5pJS87g9qN5bgfZOsRI64V3KZGqcQKp3lrIDgBrtMgmJC29iYAXn0fbtQsZX6XQkMF+tA==",
+  "dgSpecHash": "zvYhFDUlRjyifv5G9Iq9qLRmuFWp1+KAglIbnNseC+R/j28Y5itSMTiCAuGHLCCVyPeHgsDRJ0kenxiK9D81Kw==",
   "success": true,
   "projectFilePath": "C:\\Users\\20115\\Desktop\\Resume-Managment-System-App\\Backend-WebApi\\Backend-WebApi\\Backend-WebApi.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\20115\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
+    "C:\\Users\\20115\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\20115\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\20115\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\20115\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
@@ -61,6 +63,8 @@
     "C:\\Users\\20115\\.nuget\\packages\\system.memory.data\\1.0.2\\system.memory.data.1.0.2.nupkg.sha512",
     "C:\\Users\\20115\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\20115\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
+    "C:\\Users\\20115\\.nuget\\packages\\system.reflection.emit\\4.3.0\\system.reflection.emit.4.3.0.nupkg.sha512",
+    "C:\\Users\\20115\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.3.0\\system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512",
     "C:\\Users\\20115\\.nuget\\packages\\system.reflection.primitives\\4.3.0\\system.reflection.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\20115\\.nuget\\packages\\system.resources.resourcemanager\\4.3.0\\system.resources.resourcemanager.4.3.0.nupkg.sha512",
     "C:\\Users\\20115\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",

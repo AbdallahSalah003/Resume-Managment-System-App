@@ -22,6 +22,12 @@ namespace Backend_WebApi.Core.Context
                 .HasOne(candidate => candidate.Job)
                 .WithMany(job => job.Candidates)
                 .HasForeignKey(candidate => candidate.JobID);
+            modelBuilder.Entity<Company>()
+                .Property(company => company.Size)
+                .HasConversion<string>();
+            modelBuilder.Entity<Job>()
+                .Property(job => job.Level)
+                .HasConversion<string>();
         }
     }
 }
