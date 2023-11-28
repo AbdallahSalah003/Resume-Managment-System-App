@@ -1,5 +1,13 @@
+using Backend_WebApi.Core.Context;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
+// DbContext
+builder.Services.AddDbContext<AppDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("conn"));
+});
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -20,6 +28,6 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-app.MapControllers();
+app.MapControllers(); 
 
 app.Run();

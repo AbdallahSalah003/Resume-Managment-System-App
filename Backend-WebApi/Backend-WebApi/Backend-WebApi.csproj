@@ -11,4 +11,12 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Core\Context\" />
+    <Folder Include="Core\Dtos\" />
+    <Folder Include="Core\Enums\" />
+    <Folder Include="Core\MapperConfig\" />
+  </ItemGroup>
+
 </Project>
