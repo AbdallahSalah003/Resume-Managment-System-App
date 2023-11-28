@@ -1,9 +1,11 @@
 ﻿using AutoMapper;
 using Backend_WebApi.Core.Context;
 using Backend_WebApi.Core.Dtos.Candidate;
+using Backend_WebApi.Core.Dtos.Job;
 using Backend_WebApi.Core.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Backend_WebApi.Controllers
 {
@@ -11,7 +13,7 @@ namespace Backend_WebApi.Controllers
     [ApiController]
     public class CandidatesController : ControllerBase
     {
-        private AppDbContext _context { get; }
+        private AppDbContext _context;
         private IMapper _mapper;
         public CandidatesController(AppDbContext cntxt, IMapper mapper)
         {
@@ -37,6 +39,27 @@ namespace Backend_WebApi.Controllers
             await _context.candidates.AddAsync(newCandidate);
             await _context.SaveChangesAsync();
             return Ok(newCandidate);
+        }
+        [HttpGet]
+        [Route("Get")]
+        public async Task<ActionResult<IEnumerable<CandidateGetDto>>> getCandidates()
+        {
+            var candidates = await _context.candidates.Include(can => can.Job).ToListAsync();
+            var ConvertedCands = _mapper.Map<IEnumerable<CandidateGetDto>>(candidates);
+            return Ok(ConvertedCands);
+        }
+        [HttpGet]
+        [Route("download/{Url}")]
+        public IActionResult downloadPdfFile(string Url)
+        {
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "Documents", "pdfs", Url);
+            if(!System.IO.File.Exists(filePath))
+            {
+                return NotFound("File Not Found");
+            }
+            var pdfBytes = System.IO.File.ReadAllBytes(filePath);
+            var file = File(pdfBytes, "application/pdf", Url);
+            return file;
         }
     }
 }
